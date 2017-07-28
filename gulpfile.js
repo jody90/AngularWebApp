@@ -63,7 +63,7 @@ gulp.task('js', function() {
 gulp.task('angular', function() {
     return gulp.src(angularScripts)
         .pipe(sourcemaps.init())
-        .pipe(concat('angular.min.js'))
+        .pipe(concat('customAngular.min.js'))
         .pipe(gutil.env.env === 'production' ? gutil.noop() : sourcemaps.write())
         .pipe(gutil.env.env === 'production' ? uglify() : gutil.noop())
         .pipe(gulp.dest('./ressources/angular'))
